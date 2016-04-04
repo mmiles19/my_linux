@@ -1,0 +1,15 @@
+# ALIASES
+alias ls='ls -alhF --color=always'
+alias install='sudo apt-get install'
+alias update='sudo apt-get update'
+alias upgrade='sudo apt-get upgrade'
+alias up='update && upgrade'
+alias findpkg='dpkg -l | grep'
+alias f='pwd'
+alias cp='cp -i'
+alias mv='mv -i'
+
+# SETTINGS
+export PS1="\[\e[1;32m\]\$ \[\e[0m\]"
+
+echo 'Startup Script Complete'
