@@ -10,6 +10,7 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias rmf="rm -rf"
 alias fg++="g++ -Wall -w -s -pedantic-errors"
+alias c="clear"
 
 # SETTINGS
 export PS1="\[\e[1;32m\]\$ \[\e[0m\]"
