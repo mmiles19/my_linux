@@ -13,7 +13,7 @@ alias fg++="g++ -Wall -w -s -pedantic-errors"
 
 # SETTINGS
 export PS1="\[\e[1;32m\]\$ \[\e[0m\]"
-export EDITOR="nano"
+export EDITOR="sudo nano"
 
 # FUNCTIONS
 mac() { mkdir -p "$1" && cd "$1" ; }
