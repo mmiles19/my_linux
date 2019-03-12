@@ -1,0 +1,16 @@
+192.168.0.0	localhost
+
+# for batman-adv mesh net
+# ground robots
+192.168.0.100 g00 # ugv backup nuc
+192.168.0.101 g01 # 
+#192.168.100.101 marble-nuc3
+# aerial robots
+192.168.0.001	marble-nuc2 # Mike O
+# other robots
+10.0.0.2	tegra-ubuntu # Yang's TX2
+
+# The following lines are desirable for IPv6 capable hosts
+::1     localhost ip6-localhost ip6-loopback
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
