@@ -1,5 +1,5 @@
 # ALIASES
-alias ls='ls -alhF --color=always'
+alias ls='ls -ahF --color=always'
 #alias install='sudo apt-get install'
 #alias update='sudo apt-get update'
 #alias upgrade='sudo apt-get upgrade'
