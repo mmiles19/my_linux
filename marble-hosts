@@ -4,7 +4,7 @@
 # ground robots
 192.168.1.100 g00 # husky batman
 192.168.0.100 g00_0 # husky mapping
-192.168.0.101 g01_1 # husky compass  
+192.168.0.101 g00_1 # husky compass  
 #192.168.100.101 marble-nuc3
 
 # aerial robots
