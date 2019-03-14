@@ -1,12 +1,16 @@
-192.168.0.0	localhost
+127.0.0.1	localhost
 
 # for batman-adv mesh net
 # ground robots
-192.168.0.100 g00 # ugv backup nuc
-192.168.0.101 g01 # 
+192.168.1.100 g00 # husky batman
+192.168.0.100 g00_0 # husky mapping
+192.168.0.101 g01_1 # husky compass  
 #192.168.100.101 marble-nuc3
+
 # aerial robots
-192.168.0.001	marble-nuc2 # Mike O
+192.168.0.001	marble-nuc2 # mike o 
+192.168.0.200	r00	# Carl's nuc
+
 # other robots
 10.0.0.2	tegra-ubuntu # Yang's TX2
 
