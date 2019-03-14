@@ -4,10 +4,24 @@ alias ls='ls -ahF --color=always'
 #alias update='sudo apt-get update'
 #alias upgrade='sudo apt-get upgrade'
 #alias up='update && upgrade'
-#alias findpkg='dpkg -l | grep'
+alias findpkg='dpkg -l | grep'
 #alias f='pwd'
-alias cp='cp -i'
-alias mv='mv -i'
+#alias cp='cp -i'
+#alias mv='mv -i'
 alias rmf="rm -rf"
 #alias fg++="g++ -Wall -w -s -pedantic-errors"
 #alias c="clear"
+
+# SETTINGS
+export PS1="\[\e[1;32m\]\$ \[\e[0m\]"
+export EDITOR="vim"
+
+# FUNCTIONS
+mac() { mkdir -p "$1" && cd "$1" ; }
+
+getIpFromHost(){
+local host=$1
+local ip=$(getent hosts $host| grep -o "^[^ ]*")
+echo "$ip"
+}
+

@@ -1,7 +1,2 @@
 source ~/compass_ws/devel/setup.bash
 export ROS_PACKAGE_PATH=/home/ohrad/catkin_ws/src:/home/ohrad/compass_ws/src:/opt/ros/melodic/share
-
-export ROS_MASTER_URI=http://192.168.0.100:11311
-export ROS_IP=192.168.0.100
-
-export ROS_HOSTNAME=g00

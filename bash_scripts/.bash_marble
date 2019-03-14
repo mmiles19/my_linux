@@ -1,0 +1,22 @@
+#!/bin/bash
+
+###########
+# OPTIONS #
+###########
+
+export ROS_HOSTNAME=g00
+export ROS_SECONDARY=g00_0
+
+#########
+# SETUP #
+#########
+
+getIpFromHost(){
+local host=$1	
+local ip=$(getent hosts $host| grep -o "^[^ ]*")
+echo "$ip"
+}
+#echo "$(getIpFromHost g00_0)"
+
+export ROS_IP=$(getIpFromHost $ROS_SECONDARY)
+export ROS_MASTER_URI=http://$(getIpFromHost $ROS_SECONDARY):11311
