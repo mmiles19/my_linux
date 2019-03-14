@@ -18,5 +18,14 @@ echo "$ip"
 }
 #echo "$(getIpFromHost g00_0)"
 
+# setup ROS networking
 export ROS_IP=$(getIpFromHost $ROS_SECONDARY)
 export ROS_MASTER_URI=http://$(getIpFromHost $ROS_SECONDARY):11311
+
+# setup multimaster
+export MCAST_GROUP=224.0.0.1
+sudo sh -c "echo 0 >/proc/sys/net/ipv4/icmp_echo_ignore_broadcasts"
+sudo service procps restart
+
+
+
