@@ -4,8 +4,8 @@
 # OPTIONS #
 ###########
 
-export ROS_HOSTNAME=g00
-export ROS_SECONDARY=g00_0
+export ROS_ROBOT=g00
+export ROS_HOSTNAME=g00-0
 
 #########
 # SETUP #
@@ -19,8 +19,8 @@ echo "$ip"
 #echo "$(getIpFromHost g00_0)"
 
 # setup ROS networking
-export ROS_IP=$(getIpFromHost $ROS_SECONDARY)
-export ROS_MASTER_URI=http://$(getIpFromHost $ROS_SECONDARY):11311
+export ROS_IP=$(getIpFromHost $ROS_HOSTNAME)
+export ROS_MASTER_URI=http://$(getIpFromHost "$ROS_ROBOT-0"):11311
 
 # setup multimaster
 export MCAST_GROUP=224.0.0.1
