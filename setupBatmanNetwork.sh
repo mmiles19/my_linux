@@ -2,7 +2,7 @@
 # Script arguments
  
 # ip address
-ARG1=${1:-192.168.100.1}
+ARG1=${1:-192.168.100.19}
 # mtu 
 ARG2=${2:-1500}
 # frequency
@@ -14,7 +14,7 @@ sudo systemctl stop NetworkManager
 #devID=$(iw dev | awk '$1=="Interface"{print $2}')
 
 #get wifi adapter's logical name (for machines with wireless cards)
-devID=wlp1s0
+devID=wlp58s0
 
 #set ip address on VM
 sudo ip addr add $ARG1 dev $devID
@@ -39,7 +39,7 @@ sudo ip link set up dev bat0
 
 sudo ip addr add $ARG1 dev bat0
 
-sudo ip addr flush dev $devID
+#sudo ip addr flush dev $devID
 
 
 
