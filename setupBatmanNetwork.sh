@@ -33,6 +33,9 @@ tmpVar=$(iw dev | awk '$1=="Interface"{print $2}')
 arr=($(echo $tmpVar | tr " " "\n"))
 devID=$arr
 
+#overwrite to enp
+devID=eno1
+
 #bring down ip link in order to set up ip address, mtu and mode
 sudo ip link set $devID down
 

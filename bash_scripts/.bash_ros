@@ -1,6 +1,7 @@
 source ~/compass_ws/devel/setup.bash
 export ROS_PACKAGE_PATH=/home/ohrad/catkin_ws/src:/home/ohrad/compass_ws/src:/opt/ros/melodic/share
 export HUSKY_LOGITECH=1
+export ROSLAUNCH_SSH_UNKNOWN=1
 
 
 

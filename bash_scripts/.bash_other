@@ -25,3 +25,7 @@ local ip=$(getent hosts $host| grep -o "^[^ ]*")
 echo "$ip"
 }
 
+this_dev=$( ifconfig | awk '/^e/{print $1;}' | sed 's/://g' )
+this_ip=$( awk '/G01/{print $1}' /etc/hosts )
+sudo ip addr add $this_ip dev $this_dev
+
