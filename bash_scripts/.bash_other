@@ -26,6 +26,6 @@ echo "$ip"
 }
 
 this_dev=$( ifconfig | awk '/^e/{print $1;}' | sed 's/://g' )
-this_ip=$( awk '/G01/{print $1}' /etc/hosts )
+this_ip=$( awk -v this_host="$ROS_HOSTNAME" '$0~this_host{print $1}' /etc/hosts )
 sudo ip addr add $this_ip dev $this_dev
 
