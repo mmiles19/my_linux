@@ -1,5 +1,5 @@
 # ALIASES
-alias ls='ls -ahF --color=always'
+#alias ls='ls -ahF --color=always'
 #alias install='sudo apt-get install'
 #alias update='sudo apt-get update'
 #alias upgrade='sudo apt-get upgrade'
@@ -12,8 +12,19 @@ alias rmf="rm -rf"
 #alias fg++="g++ -Wall -w -s -pedantic-errors"
 #alias c="clear"
 
+case "$(uname -s)" in
+	Linux*)		machine=linux;;
+	Darwin*)	machine=mac;;
+esac
+#echo ${machine}
+
+case ${machine} in
+	linux*)		alias ls='ls -ahF --color=always';;
+	mac*)		alias ls='ls -ahF'; export CLICOLOR=1;;
+esac
+
 # SETTINGS
-#export PS1="\[\e[1;32m\]\$ \[\e[0m\]"
+export PS1="\[\e[01;32m\]\u@\h \w \[\e[00m\]"
 export EDITOR="vim"
 
 # FUNCTIONS
@@ -25,7 +36,7 @@ local ip=$(getent hosts $host| grep -o "^[^ ]*")
 echo "$ip"
 }
 
-this_dev=$( ifconfig | awk '/^e/{print $1;}' | sed 's/://g' )
-this_ip=$( awk -v this_host="$ROS_HOSTNAME" '$0~this_host{print $1}' /etc/hosts )
-sudo ip addr add $this_ip dev $this_dev
+#this_dev=$( ifconfig | awk '/^e/{print $1;}' | sed 's/://g' )
+#this_ip=$( awk -v this_host="$ROS_HOSTNAME" '$0~this_host{print $1}' /etc/hosts )
+#sudo ip addr add $this_ip dev $this_dev
 
