@@ -1,28 +1,8 @@
 #!/bin/bash
 
-###########
-# OPTIONS #
-###########
-
-export ROS_ROBOT=G00
-export ROS_HOSTNAME=G00-1
-export ROS_MASTER_URI=http://$ROS_ROBOT"-0":11311
-#export ROS_MASTER_URI=http://G00-1:11311
-
-#########
-# SETUP #
-#########
-
-getIpFromHost(){
-local host=$1	
-local ip=$(getent hosts $host| grep -o "^[^ ]*")
-echo "$ip"
-}
-#echo "$(getIpFromHost g00_0)"
-
-# setup ROS networking
-#export ROS_IP=$(getIpFromHost $ROS_HOSTNAME)
-#export ROS_MASTER_URI=http://$ROS_ROBOT"-0":11311
+export ROS_HOSTNAME=G01
+#export ROS_MASTER_URI=http://CPR-j100-0292:11311
+export ROS_MASTER_URI=http://G01:11311
 
 # setup multimaster
 export MCAST_GROUP=224.0.0.1
