@@ -1,0 +1,10 @@
+[
+    {
+        "name": "Test Suite",
+        "critical": true,
+        "commands": [
+            "echo \"Hello World\"",
+            "echo \"This command is dangerous!\""
+        ]
+    }
+]
